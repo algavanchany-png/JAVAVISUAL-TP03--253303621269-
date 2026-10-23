@@ -12,23 +12,13 @@ public class Main {
 
         CharacterManager manager = new CharacterManager();
 
-        // Data awal: 5 karakter
-        manager.addCharacter(new Character(
-                "Arthur", CharacterType.WARRIOR, 5, 150, 40, 30));
+        manager.addCharacter(new Character("Aragorn", CharacterType.WARRIOR, 6, 160, 45, 30));
+        manager.addCharacter(new Character("Gandalf", CharacterType.MAGE, 7, 110, 65, 120));
+        manager.addCharacter(new Character("Legolas", CharacterType.ARCHER, 4, 120, 50, 60));
+        manager.addCharacter(new Character("Merlin", CharacterType.MAGE, 2, 90, 40, 100));
+        manager.addCharacter(new Character("Dara", CharacterType.HEALER, 5, 130, 30, 150));
+        manager.addCharacter(new Character("Gorn", CharacterType.WARRIOR, 3, 140, 35, 25));
 
-        manager.addCharacter(new Character(
-                "Merlin", CharacterType.MAGE, 8, 100, 60, 120));
-
-        manager.addCharacter(new Character(
-                "Gandalf", CharacterType.MAGE, 3, 140, 35, 120));
-
-        manager.addCharacter(new Character(
-                "Lancelot", CharacterType.WARRIOR, 6, 180, 50, 40));
-
-        manager.addCharacter(new Character(
-                "Shadow", CharacterType.ROGUE, 4, 90, 55, 50));
-
-        // Menjalankan GUI pada Event Dispatch Thread
         SwingUtilities.invokeLater(() -> {
             MainWindow window = new MainWindow(manager);
             window.setVisible(true);
