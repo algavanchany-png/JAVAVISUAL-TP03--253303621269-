@@ -49,3 +49,15 @@ E. Karakter Baru
 - Shadow: bertipe ROGUE dengan level 4 karena digambarkan sebagai karakter yang mengandalkan kecepatan dan serangan taktis.
 
 
+ 📌 TP10 — Character Manager Sprint #4
+Tangkapan Layar (Screenshots)
+
+Sesudah (v0.4):src/screenshots/Screenshot Output Terminal (TP10) V.4.png
+
+Penjelasan AppTheme vs Model
+Warna, font, dan dekorasi disimpan di dalam `AppTheme` (layer View) dan bukan di dalam objek `Character` (layer Model) untuk menjaga prinsip pemisahan tugas (*separation of concerns*). Model murni bertugas merepresentasikan data bisnis, sementara View bertanggung jawab penuh atas aspek visual. Jika warna disimpan di Model, perubahan desain antarmuka akan memaksa perubahan pada struktur data dasar.
+
+ Dua Properti Tambahan yang Dipilih
+1. Tooltip Informasi Status: Menampilkan informasi detail (Role, Level, HP, dan Attack) saat kursor diarahkan ke kartu karakter.
+2. Dynamic Border Berdasarkan Role: Memberikan garis tepi pada kartu yang warnanya disesuaikan secara dinamis dengan *role* karakter menggunakan `AppTheme.colorFor()`.
+
